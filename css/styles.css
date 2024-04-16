@@ -1,164 +1,187 @@
-* {
+/* Cores */
+:root {
+    --background-color-body: #090e22;
+    --background-color-container: #1d1e33;
+    --text-color: #ffffff;
+    --alert-color: #db1912;
+    --button-background-color: #f44236;
+    --button-background-color-hover: #444444;
+    --table-header-color: #cccccc;
+    --table-border-color: #444444;
+    --good-color: #12db34;
+    --low-color: #dbce12;
+    --medium-color: #db6212;
+    --high-color: #db1912;
+  }
+  
+  /* Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
-}
-
-body {
-    background-color: #090e22;
+  }
+  
+  /* Body */
+  body {
+    background-color: var(--background-color-body);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #ffffff
-}
-
-.hidden {
+    color: var(--text-color);
+  }
+  
+  .hidden {
     display: none !important;
-}
-
-.container {
+  }
+  
+  /* Container */
+  .container {
     min-height: 400px;
     min-width: 400px;
-    background-color: #1d1e33;
+    background-color: var(--background-color-container);
     padding: 2rem;
-}
-
-#calc-container h2 {
+    border-radius: 0.5rem;
+  }
+  
+  /* Calculator Container */
+  #calc-container h2 {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-/* FORM */
-
-.form-inputs {
+  }
+  
+  /* Form */
+  .form-inputs {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.form-control {
+  }
+  
+  .form-control {
     display: flex;
     flex-direction: column;
     flex: 1;
     margin-bottom: 1rem;
-}
-
-.form-control label {
+  }
+  
+  .form-control label {
     font-weight: bold;
     margin-bottom: 0.6rem;
-    color: #cccccc;
-}
-
-.form-control input {
+    color: var(--table-header-color);
+  }
+  
+  .form-control input {
     padding: 1rem 0.5rem;
-}
-
-.form-control .alert {
-    color: #db1912;
+    border-radius: 0.5rem;
+  }
+  
+  .form-control .alert {
+    color: var(--alert-color);
     margin-top: 0.5rem;
-}
-
-.form-control .alert.hidden {
+  }
+  
+  .form-control .alert.hidden {
     display: none;
-}
-
-.action-control {
+  }
+  
+  .action-control {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
     gap: 1rem;
-}
-
-button {
+  }
+  
+  button {
     text-transform: uppercase;
     padding: 1rem 0.5rem;
-    background-color: #f44236;
+    background-color: var(--button-background-color);
     border: none;
-    color: #ffffff;
+    color: var(--text-color);
     cursor: pointer;
     opacity: 0.8;
     flex: 1;
-}
-
-button:hover {
+    border-radius: 0.5rem;
+  }
+  
+  button:hover {
     opacity: 1;
-}
-
-#clear-btn {
-    background-color: #444444;
-}
-
-/* TABLE RESULT */
-
-#result-container {
+  }
+  
+  #clear-btn {
+    background-color: var(--button-background-color-hover);
+  }
+  
+  /* Table Result */
+  #result-container {
     text-align: center;
     display: flex;
     flex-direction: column;
-}
-
-#imc-number {
+  }
+  
+  #imc-number {
     font-size: 2.4rem;
     margin-bottom: 0.6rem;
-}
-
-#imc-info {
+  }
+  
+  #imc-info {
     font-size: 1.4rem;
-    color: #cccccc;
-}
-
-#result-container h3 {
+    color: var(--table-header-color);
+  }
+  
+  #result-container h3 {
     margin-top: 1rem;
-    color: #dfdfdf;
-}
-
-#imc-table {
+    color: var(--text-color);
+  }
+  
+  #imc-table {
     margin: 1.5rem 0;
     font-size: 0.8rem;
-}
-
-.table-header {
+  }
+  
+  .table-header {
     font-size: bold;
-    color: #cccccc;
-}
-
-.table-header,
-.table-data {
+    color: var(--table-header-color);
+  }
+  
+  .table-header,
+  .table-data {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #444444;
-}
-
-.table-header h4,
-.table-data p {
+    border-bottom: 1px solid var(--table-border-color);
+  }
+  
+  .table-header h4,
+  .table-data p {
     flex: 1;
-}
-
-.table-header h4:nth-child(3),
-.table-data p:nth-child(3) {
+  }
+  
+  .table-header h4:nth-child(3),
+  .table-data p:nth-child(3) {
     max-width: 80px;
-}
-
-#back-btn {
+  }
+  
+  #back-btn {
     align-self: center;
     padding: 1rem 40%;
-}
-
-.good {
-    color: #12db34;
-}
-
-.low {
-    color: #dbce12;
-}
-
-.medium {
-    color: #db6212;
-}
-
-.high {
-    color: #db1912;
-}
+    border-radius: 0.5rem;
+  }
+  
+  /* Color Classes */
+  .good {
+    color: var(--good-color);
+  }
+  
+  .low {
+    color: var(--low-color);
+  }
+  
+  .medium {
+    color: var(--medium-color);
+  }
+  
+  .high {
+    color: var(--high-color);
+  }
+  
